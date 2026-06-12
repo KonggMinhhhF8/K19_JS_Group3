@@ -1,4 +1,4 @@
-# K19_JS_Group2
+# K19_JS_Group3
 # 🛒 ShopAdmin – Hệ Thống Quản Lý Bán Hàng (JavaScript Thuần - K18)
 
 ## 📌 Giới thiệu
