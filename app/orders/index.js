@@ -1,3 +1,5 @@
+import { formatProducts, formatCurrency } from "../utils/format.js";
+
 const API = "https://wo365ovs53.execute-api.ap-southeast-1.amazonaws.com";
 
 const token = localStorage.getItem("token");
@@ -52,16 +54,6 @@ function renderOrders(data) {
         </td>
       </tr>`;
   });
-}
-
-function formatProducts(order) {
-  if (!order.product) return "—";
-  return `${order.product.name} (x${order.amount})`;
-}
-
-function formatCurrency(amount) {
-  if (!amount && amount !== 0) return "—";
-  return Number(amount).toLocaleString("vi-VN") + "đ";
 }
 
 function getStatusBadge(status) {

@@ -29,6 +29,11 @@
         background-color: #f1f5f9;
       }
 
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
       .container {
         display: flex;
         min-height: 100vh;
@@ -414,7 +419,10 @@
           <li><i class="fas fa-box"></i> Sản phẩm</li>
           <li class="active"><i class="fas fa-shopping-cart"></i> Đơn hàng</li>
           <li><i class="fas fa-users"></i> Khách hàng</li>
-          <li><i class="fas fa-chart-line"></i> Báo cáo</li>
+          <li>
+            <i class="fas fa-chart-line"></i>
+            <a href="../reports/index.html">Báo cáo</a>
+          </li>
         </ul>
       </aside>
 
@@ -532,6 +540,6 @@
       </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
