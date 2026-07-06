@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Thêm khách hàng | ShopAdmin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="container">
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content">
+        <header>
+            <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Quay lại danh sách</a>
+            <h2 id="formHeading" style="margin:0;">Thêm khách hàng</h2>
+        </header>
+
+        <form id="customerForm">
+            <div class="card">
+                <h3>Thông tin khách hàng</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Họ tên <span style="color:#e74c3c;">*</span></label>
+                        <input type="text" id="name" placeholder="Nguyễn Văn A" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Email <span style="color:#e74c3c;">*</span></label>
+                        <input type="email" id="email" placeholder="email@example.com" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="text" id="phone" placeholder="09xxxxxxxx" />
+                    </div>
+                    <div class="form-group">
+                        <label>Hạng khách hàng</label>
+                        <select id="rank">
+                            <option value="BRONZE">Đồng</option>
+                            <option value="SILVER">Bạc</option>
+                            <option value="GOLD">Vàng</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <input type="text" id="address" placeholder="Số nhà, đường, quận/huyện..." />
+                </div>
+
+                <p id="formError" style="color:#e74c3c; font-size:0.9rem;"></p>
+            </div>
+
+            <div class="form-footer">
+                <a href="index.html" class="btn btn-cancel">Hủy bỏ</a>
+                <button type="submit" class="btn btn-save" id="submitBtn">Lưu khách hàng</button>
+            </div>
+        </form>
+    </main>
+</div>
+
+<script src="../auth.js"></script>
+<script src="../api.js"></script>
+<script src="../sidebar.js"></script>
+<script src="create.js"></script>
+</body>
+</html>
